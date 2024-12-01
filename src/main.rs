@@ -2,9 +2,16 @@ use std::fs::File;
 use std::io::{self, BufRead};
 
 fn read_lines_from_file(filename: &str) -> io::Result<(Vec<u32>, Vec<u32>)> {
+    let file = match File::open(filename) {
+        Ok(file) => file,
+        Err(err) => {
+            eprintln!("Error opening file: {}", err);
+            std::process::exit(1);
+        }
+    };
+
     let mut left_list = Vec::new();
     let mut right_list = Vec::new();
-    let file = File::open(filename)?;
     let reader = io::BufReader::new(file);
     let lines: Vec<String> = reader.lines().map(|line| line.unwrap()).collect();
     for line in lines {

@@ -1,8 +1,8 @@
 use std::io;
 use std::io::BufRead;
-use crate::util::get_file;
+use super::super::utils::files::get_file;
 
-pub(crate) fn day_2() {
+pub fn run() {
     println!("day 2");
     let mut safe_report_count = 0;
     let mut safe_report_with_dampener_count = 0;

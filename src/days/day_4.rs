@@ -1,8 +1,8 @@
 use std::io;
 use std::io::BufRead;
-use crate::util::get_file;
+use super::super::utils::files::get_file;
 
-pub(crate) fn day_4() {
+pub fn run() {
     let characters = load_puzzle("./input/day4.txt").expect("Failed to read lines");
 
     let mut xmas_counter = 0;

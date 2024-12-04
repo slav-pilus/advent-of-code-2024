@@ -1,9 +1,9 @@
-use crate::util::get_file;
 use regex::Regex;
 use std::io;
 use std::io::BufRead;
+use super::super::utils::files::get_file;
 
-pub(crate) fn day_3() {
+pub fn run() {
     part_1();
     part_2();
 }

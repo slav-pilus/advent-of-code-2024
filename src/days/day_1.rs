@@ -1,8 +1,8 @@
 use std::io;
 use std::io::BufRead;
-use crate::util::get_file;
+use super::super::utils::files::get_file;
 
-pub(crate) fn day_1() {
+pub fn run() {
     println!("day 1");
 
     let (left_list, right_list) =

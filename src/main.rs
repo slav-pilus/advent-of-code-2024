@@ -2,8 +2,10 @@ mod day_2;
 mod day_1;
 mod util;
 mod day_3;
+mod day_4;
 
 use std::env;
+use crate::day_4::day_4;
 use crate::day_3::day_3;
 use crate::day_2::day_2;
 use crate::day_1::day_1;
@@ -20,6 +22,7 @@ fn main() {
         "1" => day_1(),
         "2" => day_2(),
         "3" => day_3(),
+        "4" => day_4(),
         _ => println!("Invalid day")
     }
 }

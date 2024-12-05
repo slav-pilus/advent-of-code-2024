@@ -6,6 +6,7 @@ use days::day_1;
 use days::day_2;
 use days::day_3;
 use days::day_4;
+use days::day_5;
 
 fn main() {
     println!("\n");
@@ -20,6 +21,7 @@ fn main() {
         "2" => day_2::run(),
         "3" => day_3::run(),
         "4" => day_4::run(),
+        "5" => day_5::run(),
         _ => println!("Invalid day")
     }
 }

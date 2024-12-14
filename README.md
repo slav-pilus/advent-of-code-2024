@@ -20,3 +20,5 @@ alternatively build and run the docker image for day 1:
 docker build -t advent-of-code-2024 .
 docker run -it advent-of-code-2024 1
 ```
+
+Starting from day 10 I've switched to Python. I've kept this readme file for the Rust version for now.

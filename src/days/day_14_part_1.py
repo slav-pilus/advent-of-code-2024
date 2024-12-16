@@ -1,7 +1,7 @@
 import math
 
 class Cell:
-    def __init__(self, x, y):
+    def __init__(self):
         self.robots = []
 
     def __str__(self):
@@ -60,8 +60,7 @@ def int_grid(y, x):
     for i in range(x):
         row = []
         for j in range(y):
-            row.append(Cell(i, j))
-
+            row.append(Cell())
         grid.append(row)
 
     return grid
@@ -70,9 +69,6 @@ def print_grid(grid):
     for row in grid:
         print(' '.join(map(str, row)))
 
-
-def clamp(value, max_value):
-    return (value % (max_value + 1))
 
 def step(r_row, c_col, r_col, c_row):
     new_col = (c_col + r_row) % wide
